@@ -6,8 +6,8 @@
 | :--- | :--- |
 | **Metodologia** | Lean Six Sigma (Green Belt) |
 | **Patrocinador (Sponsor)** | Grupo de Investidores (Stakeholders que detêm o capital) |
-| **Líder do Projeto** | [Seu Nome] (Consultor/Engenheiro de Dados) |
-| **Início Previsto** | [Data Atual] |
+| **Líder do Projeto** | DEBORA REBULA KLEIN (Consultor/Engenheiro de Dados) |
+| **Início Previsto** | 31/10/2025 |
 | **Duração Estimada** | 4 a 6 Meses |
 
 ---
