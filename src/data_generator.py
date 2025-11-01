@@ -19,16 +19,23 @@ def gerar_logs_atendimento(df_medicos):
     # Lista de IDs de médicos (para sorteio)
     medicos_ids = df_medicos['id_medico'].unique()
     
+    # Lista de IDs de médicos (para sorteio)
+    medicos_ids = df_medicos['id_medico'].unique()
+    
+    # Probabilidade de ser atendido: 1.0 - TAXA_EVASAO (1 - 0.15 = 0.85)
+    # Probabilidade de desistir: TAXA_EVASAO (0.15)
+    PROB_ATENDIDO = 1.0 - TAXA_EVASAO
+    
     dados = {
         'id_atendimento': np.arange(1000, 1000 + NUM_REGISTROS),
         'data_chegada': [DATA_BASE.strftime('%Y-%m-%d')] * NUM_REGISTROS,
         'hora_checkin': [],
         'id_medico': np.random.choice(medicos_ids, NUM_REGISTROS),
-        'status': np.random.choice(['Atendido', 'Atendido', 'Atendido', 'Desistiu'], 
+        # CORREÇÃO APLICADA: Simplifica o sorteio para apenas Atendido (85%) e Desistiu (15%)
+        'status': np.random.choice(['Atendido', 'Desistiu'], 
                                    NUM_REGISTROS, 
-                                   p=[0.85 - TAXA_EVASAO, 0.05, 0.05, TAXA_EVASAO])
+                                   p=[PROB_ATENDIDO, TAXA_EVASAO])
     }
-
     # 1. Simulação do Check-in
     # Check-ins distribuídos entre 8h e 16h
     checkin_segundos = np.random.randint(8 * 3600, 16 * 3600, NUM_REGISTROS)
@@ -99,17 +106,40 @@ def main():
     caminho_base = os.path.dirname(os.path.abspath(__file__)).replace('src', '')
     caminho_raw = os.path.join(caminho_base, 'data', 'raw')
     
+    # NOVO CÓDIGO ROBUSTO DE LEITURA ETL (dentro da função main)
     # 1. Ler a dimensão de médicos
     caminho_medicos = os.path.join(caminho_raw, 'escala_medicos.csv')
     
+    # --- INÍCIO DO TRATAMENTO DE LEITURA ROBUSTA ---
     try:
-        df_medicos = pd.read_csv(caminho_medicos)
-        
-    except FileNotFoundError:
-        print(f"ERRO: Arquivo {caminho_medicos} não encontrado.")
-        print("Certifique-se de que a dimensão de 20 médicos foi criada e salva em data/raw/escala_medicos.csv.")
-        return
+        # Tenta ler com a vírgula (padrão)
+        df_medicos = pd.read_csv(caminho_medicos, sep=',')
+    except Exception:
+        # Tenta ler com ponto e vírgula (comum no Excel brasileiro)
+        try:
+            df_medicos = pd.read_csv(caminho_medicos, sep=';')
+        except FileNotFoundError:
+             print(f"ERRO: Arquivo {caminho_medicos} não encontrado.")
+             print("Certifique-se de que a dimensão de 20 médicos foi criada e salva em data/raw/escala_medicos.csv.")
+             return
+        except Exception as e:
+            print(f"ERRO CRÍTICO ao tentar ler o CSV dos médicos com separador: {e}")
+            return
 
+    # A LIMPEZA ROBUSTA: Remove espaços em branco do início/fim dos nomes das colunas (Corrigindo o KeyError anterior)
+    df_medicos.columns = df_medicos.columns.str.strip()
+    
+    # Validação Pós-Limpeza (Garante que a coluna chave existe)
+    if 'id_medico' not in df_medicos.columns:
+        print("\n" + "="*70)
+        print("ERRO CRÍTICO: A coluna 'id_medico' não foi encontrada após a limpeza.")
+        print(f"As colunas lidas são: {list(df_medicos.columns)}")
+        print("Verifique manualmente o cabeçalho do arquivo escala_medicos.csv.")
+        print("="*70)
+        return
+    # --- FIM DO TRATAMENTO DE LEITURA ROBUSTA ---
+    
+   
     # 2. Gerar logs
     df_logs = gerar_logs_atendimento(df_medicos)
     
