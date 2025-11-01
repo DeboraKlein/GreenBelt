@@ -84,6 +84,21 @@ def gerar_logs_atendimento(df_medicos):
         axis=1
     )
     
+    # Formatação de Saída
+    df_logs['hora_checkin'] = df_logs['hora_checkin'].astype(str).str.split().str[-1]
+    df_logs['hora_consulta_inicio'] = df_logs['hora_consulta_inicio'].astype(str).str.split().str[-1].replace('NaT', '')
+    df_logs['hora_consulta_fim'] = df_logs['hora_consulta_fim'].astype(str).str.split().str[-1].replace('NaT', '')
+    
+    # --- NOVO AJUSTE: LIMPEZA DO ID_MEDICO ANTES DE SALVAR ---
+    # Remove qualquer caractere que não seja alfanumérico na coluna de médico
+    df_logs['id_medico'] = df_logs['id_medico'].astype(str).str.replace(r'[^\w]', '', regex=True).str.strip()
+    
+    # Selecionar e ordenar colunas finais
+    df_logs = df_logs[['id_atendimento', 'data_chegada', 'hora_checkin', 'hora_consulta_inicio', 
+                       'hora_consulta_fim', 'id_medico', 'status']]
+    
+    return df_logs
+    
     # 4. Tratamento da Evasão (Status 'Desistiu')
     # Pacientes que desistiram não têm hora_consulta_inicio ou hora_consulta_fim
     df_logs.loc[df_logs['status'] == 'Desistiu', ['hora_consulta_inicio', 'hora_consulta_fim']] = np.nan
@@ -176,4 +191,4 @@ if __name__ == "__main__":
     
   
     
-    
+   
