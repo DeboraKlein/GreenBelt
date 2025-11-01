@@ -106,40 +106,57 @@ def main():
     caminho_base = os.path.dirname(os.path.abspath(__file__)).replace('src', '')
     caminho_raw = os.path.join(caminho_base, 'data', 'raw')
     
-    # NOVO CÓDIGO ROBUSTO DE LEITURA ETL (dentro da função main)
+       
     # 1. Ler a dimensão de médicos
     caminho_medicos = os.path.join(caminho_raw, 'escala_medicos.csv')
     
-    # --- INÍCIO DO TRATAMENTO DE LEITURA ROBUSTA ---
-    try:
-        # Tenta ler com a vírgula (padrão)
-        df_medicos = pd.read_csv(caminho_medicos, sep=',')
-    except Exception:
-        # Tenta ler com ponto e vírgula (comum no Excel brasileiro)
-        try:
-            df_medicos = pd.read_csv(caminho_medicos, sep=';')
-        except FileNotFoundError:
-             print(f"ERRO: Arquivo {caminho_medicos} não encontrado.")
-             print("Certifique-se de que a dimensão de 20 médicos foi criada e salva em data/raw/escala_medicos.csv.")
-             return
-        except Exception as e:
-            print(f"ERRO CRÍTICO ao tentar ler o CSV dos médicos com separador: {e}")
-            return
-
-    # A LIMPEZA ROBUSTA: Remove espaços em branco do início/fim dos nomes das colunas (Corrigindo o KeyError anterior)
-    df_medicos.columns = df_medicos.columns.str.strip()
+    # --- INÍCIO DO TRATAMENTO DE LEITURA ROBUSTA COM MÚLTIPLAS ENCODINGS ---
+    df_medicos = None # Inicializa para garantir que a variável exista
+    encoding_tentativas = ['utf-8-sig', 'latin-1', 'iso-8859-1', 'utf-8']
     
-    # Validação Pós-Limpeza (Garante que a coluna chave existe)
-    if 'id_medico' not in df_medicos.columns:
+    for encoding in encoding_tentativas:
+        try:
+            # Força o separador ponto-e-vírgula (;), tenta a codificação e desativa a leitura de aspas
+            df_medicos = pd.read_csv(caminho_medicos, 
+                                     sep=';', 
+                                     encoding=encoding, 
+                                     quoting=3, # Desativa a leitura de aspas
+                                     engine='python')  # Engine mais robusto para parsing
+                                      # Engine mais robusto para parsing
+            print(f"SUCESSO: Arquivo de médicos lido com encoding: {encoding}")
+            break
+        except FileNotFoundError:
+            print(f"ERRO: Arquivo {caminho_medicos} não encontrado.")
+            return
+        except (UnicodeDecodeError, pd.errors.EmptyDataError):
+            continue
+        except Exception as e:
+            print(f"ERRO CRÍTICO na leitura do CSV: {e}")
+            return
+    
+    if df_medicos is None:
         print("\n" + "="*70)
-        print("ERRO CRÍTICO: A coluna 'id_medico' não foi encontrada após a limpeza.")
-        print(f"As colunas lidas são: {list(df_medicos.columns)}")
-        print("Verifique manualmente o cabeçalho do arquivo escala_medicos.csv.")
+        print("FALHA CRÍTICA: Não foi possível ler o arquivo 'escala_medicos.csv' com nenhuma codificação.")
+        print("Verifique se o arquivo está na pasta data/raw/ e se não está corrompido.")
+        print("="*70)
+        return
+
+    # A LIMPEZA ROBUSTA: (Remove apenas espaços, mantendo underscores)
+    df_medicos.columns = df_medicos.columns.str.strip()
+    # --- NOVO AJUSTE: REMOVER AS ASPAS QUE SOBRARAM ---
+    df_medicos.columns = df_medicos.columns.str.replace('"', '')
+    
+    # Validação Pós-Limpeza (Checa as duas formas possíveis do nome da coluna)
+    if 'id_medico' not in df_medicos.columns or ('perfil_variabilidade' not in df_medicos.columns and 'perfilvariabilidade' not in df_medicos.columns):
+        print("\n" + "="*70)
+        print("ERRO CRÍTICO: As colunas chave não foram encontradas após a limpeza de espaços.")
+        print(f"Colunas encontradas: {list(df_medicos.columns)}")
+        print("Verifique o cabeçalho do CSV: id_medico;nome_medico;especialidade;perfil_variabilidade.")
         print("="*70)
         return
     # --- FIM DO TRATAMENTO DE LEITURA ROBUSTA ---
     
-   
+           
     # 2. Gerar logs
     df_logs = gerar_logs_atendimento(df_medicos)
     
