@@ -1,26 +1,25 @@
-#  GLOSSÁRIO DE TERMOS E MÉTRICAS INICIAIS
+#  GLOSSÁRIO DE TERMOS E MÉTRICAS - CATÁLOGO DE COMPRAS
 
-Este glossário define os termos de negócio e as métricas essenciais que serão utilizadas para medir, analisar e controlar o processo de atendimento do Hospital Santa Casa de Quem Grita Mais.
+Este glossário define os termos de negócio e as métricas essenciais para o projeto de Ociosidade do Catálogo de Compras.
 
 ---
 
-## 1. MÉTRICAS CHAVE DO PROCESSO (A Serem Modeladas)
+# 1. Glossário de Termos Six Sigma e Métricas
+
+| Termo | Categoria | Definição no Projeto |
+| :--- | :--- | :--- |
+| **Métrica Y** | Métrica | **Taxa de Não-Utilização (Ociosidade):** Percentual de itens no catálogo que não foram comprados em 12 meses. |
+| **Métrica X** | Causa Raiz | **Governabilidade do Item:** A qualidade do dado de governança, como a **presença e validade do Código ANVISA**. |
+| **CTQ** | Cliente | **Item Válido para Compra:** Um item de catálogo que possui todos os atributos de governança (ANVISA, Fabricante, etc.) preenchidos corretamente. |
+| **Baseline** | Métrica | A taxa de 70% de itens que não geraram valor (não foram comprados). |
+| **COPQ** | Finanças | **Custo da Má Qualidade:** O custo administrativo de gerenciar itens obsoletos e não conformes. |
+
+---
+
+## 2. MÉTRICAS CHAVE DO PROCESSO (A Serem Modeladas)
 
 | Termo | Definição | Base de Cálculo/Contexto |
 | :--- | :--- | :--- |
-| **Tempo de Espera (Lead Time)** | O tempo que um paciente gasta desde o **Check-in na Recepção** até o **Início Efetivo da Consulta**. (A principal métrica Y). | `Início da Consulta (Log) - Check-in (Log)` |
-| **Tempo de Ciclo (Cycle Time)** | O tempo total que o Médico gasta no atendimento de uma única consulta. | `Fim da Consulta (Log) - Início da Consulta (Log)` (Apresenta alta variabilidade: 5 a 50 minutos). |
-| **Taxa de Evasão (Perda)** | Percentual de pacientes que desistem da espera e vão embora sem atendimento. | `(Pacientes que Desistiram / Total de Pacientes que Fizeram Check-in) * 100` |
-| **Capacidade Ociosa** | A diferença entre a capacidade de atendimento atual (160/dia) e a capacidade máxima (aproximadamente 360/dia, baseada no concorrente). | `360 - 160 = 200 pacientes/dia de potencial não atendido` |
-| **Custo da Má Qualidade (COPQ)** | A receita perdida devido à evasão e à incapacidade de atender mais pacientes. | `(Pacientes Perdidos Diariamente) * R$ 100,00` |
-
----
-
-## 2. TERMOS DE GOVERNANÇA E SEIS SIGMA
-
-| Termo | Definição | Contexto no Projeto |
-| :--- | :--- | :--- |
-| **Variabilidade** | As oscilações no tempo de ciclo e de espera (ex: de 5 a 50 minutos). A principal causa do descontrole. | O projeto visa **reduzir a variabilidade** para garantir um tempo de espera previsível (estável). |
-| **Fora de Controle Estatístico** | Uma métrica que ultrapassa os limites de controle (LSC/LIC) em um Gráfico de Controle. | Aplicável aos Médicos que sistematicamente gastam 50 minutos ou chegam atrasados, sendo *outliers* na análise. |
-| **Gargalo (Bottleneck)** | O ponto do processo que limita a saída total. | A alta variabilidade do tempo de ciclo e a falta de padronização no agendamento são os gargalos do SCQM. |
-| **MiniPy** | O framework de análise estatística em Python/Streamlit criado para este projeto. | Ferramenta de **Controle** que automatizará os Gráficos de Controle do DMAIC. |
+| **Status de Utilização** | Indica se o item gerou valor. | Determinado pela presença do `id_produto` na tabela `fato_compras_medicamentos`. |
+| **Compliance ANVISA** | Métrica de qualidade do cadastro. | A porcentagem de itens que possuem o campo `codigo_anvisa` preenchido e formatado corretamente. |
+| **Itens Obsoletos/Inválidos** | A porção do catálogo que não deve mais ser utilizada. | Itens que não possuem o Código ANVISA preenchido (nossa Métrica X principal). |
