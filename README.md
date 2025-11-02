@@ -105,7 +105,16 @@ Abaixo estão as visualizações de dados que comprovam o diagnóstico (FASE ANA
 
 
 **[Exemplo: Imagem do Gráfico SPC]**
-`![Gráfico de Controle SPC](assets/spc_chart.png)`
+`![Gráfico de Controle SPC](assets/kpis.png)`
 
 **[Exemplo: Imagem do Gráfico de Pareto X3]**
-`![Gráfico de Pareto X3](assets/pareto_modalidade.png)`
+`![Gráfico de Pareto X3](assets/grafico_controle.png)`
+
+**[Exemplo: Imagem do Gráfico de Pareto X3]**
+`![Gráfico de Pareto X3](assets/defeitos_uf.png)`
+
+**[Exemplo: Imagem do Gráfico de Pareto X3]**
+`![Gráfico de Pareto X3](assets/plano_acao.pngg)`
+
+**[Exemplo: Imagem do Gráfico de Pareto X3]**
+`![Gráfico de Pareto X3](assets/alerta_acao.png)`
