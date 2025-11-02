@@ -1,55 +1,56 @@
-#  PROJECT CHARTER: Otimização do Atendimento e Capacidade do Hospital SCQM
+## PROJECT CHARTER: MITIGAÇÃO DO ALTO RISCO DE PREÇO NO PROCESSO DE COMPRAS (Ênfase no Pregão)
 
-## 1. INFORMAÇÕES BÁSICAS
+### 1. INFORMAÇÕES BÁSICAS
 
-| Título do Projeto | Otimização do Tempo de Espera (Lead Time) e Aumento da Capacidade de Atendimento no Ambulatório. |
+| Título do Projeto | Otimização do Processo de Compras: Mitigação do Alto Risco de Preço em Itens Intermitentes. |
 | :--- | :--- |
-| **Metodologia** | Lean Six Sigma (Green Belt) |
-| **Patrocinador (Sponsor)** | Grupo de Investidores (Stakeholders que detêm o capital) |
-| **Líder do Projeto** | DEBORA REBULA KLEIN (Consultor/Engenheiro de Dados) |
-| **Início Previsto** | 31/10/2025 |
-| **Duração Estimada** | 4 a 6 Meses |
+| Metodologia | Lean Six Sigma (Green Belt) |
+| Patrocinador (Sponsor) | Departamento de Logística e Compras |
+| Líder do Projeto | DEBORA REBULA KLEIN (Consultor/Analista de Dados) |
+| Início Previsto | 31/10/2025 |
+| Duração Estimada | 4 a 6 Meses |
 
 ---
 
-## 2. FASE DEFINE: DECLARAÇÃO DO PROBLEMA E OBJETIVO
+### 2. FASE DEFINE: DECLARAÇÃO DO PROBLEMA E OBJETIVO
 
-### 2.1. Declaração do Problema (As Perdas)
+#### 2.1. Declaração do Problema (As Perdas - Métrica Y)
 
-O Hospital Santa Casa de Quem Grita Mais enfrenta uma grave crise financeira e perda de clientes devido à ineficiência operacional no atendimento ambulatorial.
+O processo de aquisição de medicamentos apresenta um alto índice de transações com **preços atípicos (outliers)**, indicando instabilidade no *benchmarking* de preços e **risco de gasto excessivo (COPQ)**, sendo este problema concentrado em itens comprados esporadicamente.
 
-* **Problema Quantificado:** O Tempo Médio de Espera é de **4 horas**, com picos de **8 horas**.
-* **Consequência:** Perda de receita potencial, alta evasão de pacientes, má reputação e desconforto generalizado (lotação da sala de espera, que tem capacidade para 10, mas recebe mais de 20).
-* **Receita Perdida Estimada:** O concorrente atende 360 pacientes/dia. Com a mesma equipe, o SCQM atende 160. A perda de receita potencial é de **200 pacientes/dia** (200 x R$ 100,00) = **R$ 20.000,00/dia**.
+* **Problema Quantificado (Y - BASELINE):** $\mathbf{2.50\%}$ das $\mathbf{263.562}$ transações de compra estão em Alto Risco de Preço (Z-Score $|>2.0|$).
+* **Causa Raiz Comprovada (X):** $\mathbf{100\%}$ desses defeitos ocorrem em produtos com **Intermitência Média/Alta** e $\mathbf{83.18\%}$ deles na modalidade **Pregão**.
 
-### 2.2. Objetivo SMART (A Solução)
+#### 2.2. Objetivo do Projeto (Melhoria SMART)
 
-O objetivo é atuar nas causas raízes da alta variabilidade e do descontrole do processo.
+O objetivo é atuar nas Causas Raízes (X) para reduzir a variabilidade e o risco de gasto excessivo.
 
 | Critério | Objetivo |
 | :--- | :--- |
-| **S**pecific (Específico) | Reduzir o **Tempo Médio de Espera do Paciente (Lead Time)**. |
-| **M**easurable (Mensurável) | Reduzir o **Tempo Médio de Espera de 4h para menos de 60 minutos (1 hora)**. |
-| **A**chievable (Alcançável) | Aumentar o Volume Médio de Atendimento de 160 para **250 pacientes/dia**. |
-| **R**elevant (Relevante) | Reverter a crise financeira e aumentar a satisfação do cliente. |
-| **T**ime-bound (Prazo) | O objetivo primário deve ser alcançado em 4 meses. |
+| **Specific (Específico)** | Implementar o **Protocolo de Sourcing Otimizado** para itens intermitentes na modalidade Pregão. |
+| **Measurable (Mensurável)** | Reduzir o Baseline de Alto Risco de $\mathbf{2.50\%}$ para um máximo de $\mathbf{1.0\%}$ do total de transações. |
+| **Achievable (Alcançável)** | Focar a melhoria no subconjunto de $\mathbf{5.894}$ transações que atende o critério de **Alto Risco de Aquisição**. |
+| **Relevant (Relevante)** | Reduzir o risco de gasto excessivo (COPQ) e aumentar a confiabilidade do PMP de referência. |
+| **Time-bound (Prazo)** | O objetivo primário deve ser alcançado em $\mathbf{6 \text{ meses}}$ após a implementação do novo protocolo. |
 
 ---
 
-## 3. ESCOPO DO PROJETO (O Que Será e o Que Não Será Feito)
+### 3. FASE ANALYZE: CONCLUSÃO DO DIAGNÓSTICO (A Evidência)
+
+A análise dos $\mathbf{6.575}$ defeitos (Alto Risco) demonstrou a necessidade de focar o *IMPROVE* na fragilidade do PMP de itens irregulares.
+
+| Causa Raiz | Métrica de Foco | Diagnóstico para o IMPROVE |
+| :--- | :--- | :--- |
+| **X1 - Risco de Intermitência** | $\mathbf{100\%}$ dos defeitos (Y) | O PMP histórico é volátil; será substituído pelo **PMP Móvel (6 meses)** (Ação A2). |
+| **X3 - Modalidade Pregão** | $\mathbf{83.18\%}$ dos defeitos (Y) | O processo de compra precisa de **validação externa (3 Cotações)** para itens críticos (Ação A1). |
+| **X2 - Qualidade de Dados** | Secundário (Ação Poka-Yoke) | Será implementado um *hard stop* (Poka-Yoke) para bloquear a compra de itens críticos sem o Código ANVISA preenchido (Ação A4). |
+
+---
+
+### 4. ESCOPO DO PROJETO (O Que Será e o Que Não Será Feito)
 
 | Incluído | Excluído |
 | :--- | :--- |
-|  Processo de **Agendamento, Recepção e Espera** do Ambulatório. |  Otimização de Processos Cirúrgicos ou Internação. |
-|  Análise da **Variabilidade do Tempo de Atendimento** por Médico. |  Compra ou Troca de Sistemas de Agendamento (Foco na otimização do processo atual). |
-|  Criação de um **Sistema de Controle Estatístico** (Dashboard MiniPy). |  Treinamento de Soft Skills para Atendentes ou Médicos. |
-
----
-
-## 4. ESTRATÉGIA DE DADOS E ENGENHARIA
-
-O diferencial do projeto será a automação das análises estatísticas do Six Sigma.
-
-* **Métrica Y (a ser modelada):** Tempo de Espera (minutos).
-* **Fontes de Dados Críticas:** Logs do sistema de *Check-in/Check-out*, Registros de Início/Fim da Consulta, Escala Médica.
-* **Entregável Central de Engenharia:** **Framework "MiniPy"** (Dashboard em Streamlit) para monitorar as Métricas de Controle (LSC/LIC) em tempo real.
+| **Análise do Risco de Intermitência (X1) e do Z-Score (Y) para todos os itens da base de compras.** | Otimização do processo de logística de entrega dos medicamentos. |
+| **Criação e implementação de um Protocolo de Sourcing Diferenciado (PMP Móvel e 3 Cotações) para itens intermitentes negociados via Pregão.** | Negociação direta de preços com fornecedores (o foco é no processo, não na negociação em si). |
+| **Criação de um Painel de Controle (Dashboard) para monitoramento contínuo (FASE CONTROL).** | Análise da variação de preços de itens de compra **regular** (Intermitência Baixa). |
