@@ -105,16 +105,16 @@ Abaixo estão as visualizações de dados que comprovam o diagnóstico (FASE ANA
 
 
 **[KPIs do Projeto]**
-`![KPIs](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/kpis.png)`
+![KPIs]assets/grafico_pregao.png)
 
 **[Gráfico de Controle]**
-`![Controle](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/grafico_controle.png)`
+![Controle](grafico_controle.png)
 
 **[Gráfico dos Defeitos]**
-`![Defeitos](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/defeitos_uf.png)`
+![Defeitos](defeitos_uf.png)
 
 **[Plano de Ação]**
-`![Plano de Ação](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/plano_acao.png)`
+![Plano de Ação](plano_acao.png)
 
 **[Alerta de Ação]**
-`![Alerta de Ação](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/alerta_acao.png)`
+![Alerta de Ação](alerta_acao.png)
