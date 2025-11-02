@@ -28,7 +28,7 @@ A análise estatística comprovou que o problema é sistêmico, concentrando-se 
 | Causa Raiz (X) | Impacto Comprovado | Ação de Melhoria (IMPROVE) |
 | :--- | :--- | :--- |
 | **X1: Risco de Intermitência** | $\mathbf{100\%}$ dos Defeitos (Y) | Implementar o uso de **PMP Móvel (6 meses)**. |
-| **X3: Modalidade Pregão** | $\mathbf{83.18\%}$ dos Defeitos (Y) | Implementar o **Protocolo de Sourcing Otimizado (3 Cotações)**. |
+| **X3: Modalidade Pregão** | $83,18%$ dos Defeitos (Y) | Implementar o **Protocolo de Sourcing Otimizado (3 Cotações)**. |
 
 
 ### Amostra dos Outliers Positivos (Evidência do Dano)
@@ -105,7 +105,7 @@ Abaixo estão as visualizações de dados que comprovam o diagnóstico (FASE ANA
 
 
 **[KPIs do Projeto]**
-![KPIs](assets/grafico_pregao.png)
+![KPIs](assets/kpis.png)
 
 **[Gráfico de Controle]**
 ![Controle](assets/grafico_controle.png)
