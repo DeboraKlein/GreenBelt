@@ -14,7 +14,7 @@ O problema foi formalmente redefinido com base no valor financeiro e na variabil
 
 | Métrica Chave | Definição | Baseline Comprovado | Meta SMART |
 | :--- | :--- | :--- | :--- |
-| **Métrica Y** (Defeito) | Taxa de Transações com Alto Risco de Preço (Z-Score $|>2.0|$). | **2.50%** (de 263.562 transações). | Redução para um máximo de **1.0%** (em 6 meses). |
+| **Métrica Y** (Defeito) | Taxa de Transações com Alto Risco de Preço (Z-Score $>2.0$). | **2.50%** (de 263.562 transações). | Redução para um máximo de **1.0%** (em 6 meses). |
 | **Dano (COPQ)** | Risco de Gasto Excessivo. | Casos críticos com desvios de Z-Score de até $\mathbf{17.34}$. | Mitigação de $\mathbf{60\%}$ do risco no processo de compra. |
 
 ### [ACESSAR O PROJECT CHARTER COMPLETO (docs/01_Project_Charter.md)]

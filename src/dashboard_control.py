@@ -15,7 +15,7 @@ UCL_Y = 1.5   # Limite de Controle Superior (UCL) de 1.5%
 LIMITE_Z_SCORE = 2.0 # O limite que define o Defeito (Y)
 
 # NOVA PALETA DE CORES (Customizada)
-PALETA_CORES = ['#ff8b94', '#ffaaa5', '#ffd3b6', '#dcedc1', '#a8e6cf']
+PALETA_CORES = ['#3bd6c6', '#40e0d0', '#43e8d8', '#89ecda', '#b3ecec']
 
 st.set_page_config(layout="wide", page_title="Controle Six Sigma - Risco de Preço")
 
@@ -176,9 +176,7 @@ def main():
     # Redefine df para a base filtrada para todo o dashboard
     df = df_filtrado.copy()
     
-    # ↑↑↑↑ FIM DO BLOCO DE FILTROS ↑↑↑↑
-
-      
+          
         
     # ---------------------------------------------------------------------------------
     # --- 3. CÁLCULOS DAS MÉTRICAS DE CONTROLE (KPIs) ---
