@@ -1,38 +1,37 @@
 
-#  PROJETO GREEN BELT: MITIGAÇÃO DO ALTO RISCO DE PREÇO EM COMPRAS PÚBLICAS
+# PROJETO GREEN BELT: MITIGAÇÃO DO ALTO RISCO DE PREÇO EM COMPRAS PÚBLICAS
 
-Este repositório documenta a aplicação da metodologia Lean Six Sigma (Green Belt) em um desafio estratégico: a **mitigação do Alto Risco de Preço (Outliers)** em aquisições de medicamentos, um problema que ameaça a eficiência do gasto público.
+Este repositório documenta a aplicação da metodologia Lean Six Sigma (Green Belt) para resolver um problema estratégico no processo de aquisição de medicamentos: a **instabilidade e o gasto excessivo** resultantes de transações com Alto Risco de Preço, concentradas em itens intermitentes e na modalidade Pregão.
 
-**Metodologia:** DMAIC - Definir, Medir, Analisar, Melhorar, Controlar.
-**Foco:** Otimização do protocolo de Sourcing no Pregão para itens com demanda instável (Intermitência).
+**Treinamento:** Murilo Fonseca - Instrutor Master Black Belt
 
 ---
 
-## 1. FASE DEFINE (O Escopo e a Métrica de Sucesso)
+## Detalhamento Técnico (Metodologia DMAIC)
+
+
+### FASE DEFINE (O Escopo Estratégico)
 
 O problema foi formalmente redefinido com base no valor financeiro e na variabilidade do processo (Defeito Y).
 
 | Métrica Chave | Definição | Baseline Comprovado | Meta SMART |
 | :--- | :--- | :--- | :--- |
-| **Métrica Y** (Defeito) | Taxa de Transações com Alto Risco de Preço (Z-Score $>2.0$). | **2.50%** (de 263.562 transações). | Redução para um máximo de **1.0%** (em 6 meses). |
-| **Dano (COPQ)** | Risco de Gasto Excessivo. | Casos críticos com desvios de Z-Score de até $\mathbf{17.34}$. | Mitigação de $\mathbf{60\%}$ do risco no processo de compra. |
+| **Métrica Y** (Defeito) | Taxa de Transações com Alto Risco de Preço (Z-Score $|>2.0|$). | **2.50%** | Redução para **1.0%**. |
+| **Dano (COPQ)** | Risco de Gasto Excessivo. | Casos críticos com Z-Score de até $\mathbf{17.34}$. | Mitigação de $\mathbf{60\%}$ do risco. |
 
-### [ACESSAR O PROJECT CHARTER COMPLETO (docs/01_Project_Charter.md)]
 
----
 
-## 2. FASE MEASURE & ANALYZE (O Diagnóstico da Causa Raiz)
+### FASE MEASURE & ANALYZE (O Diagnóstico da Causa Raiz)
 
-A análise estatística comprovou que o problema é sistêmico e não aleatório, concentrando-se na interseção de duas causas raízes:
+A análise estatística comprovou que o problema é sistêmico, concentrando-se na interseção de duas causas raízes:
 
-###  Prova de Concentração (Regra 80/20)
-
-| Causa Raiz (X) | Impacto Comprovado | Implicação no Processo |
+| Causa Raiz (X) | Impacto Comprovado | Ação de Melhoria (IMPROVE) |
 | :--- | :--- | :--- |
-| **X1: Risco de Intermitência** | $\mathbf{100\%}$ dos Defeitos (Y) | O PMP (Preço Médio) de referência é volátil e falho para estes itens. |
-| **X3: Modalidade Pregão** | $\mathbf{83.18\%}$ dos Defeitos (Y) | O protocolo de *sourcing* é insuficiente para garantir o preço justo em compras críticas. |
+| **X1: Risco de Intermitência** | $\mathbf{100\%}$ dos Defeitos (Y) | Implementar o uso de **PMP Móvel (6 meses)**. |
+| **X3: Modalidade Pregão** | $\mathbf{83.18\%}$ dos Defeitos (Y) | Implementar o **Protocolo de Sourcing Otimizado (3 Cotações)**. |
 
-###  Amostra dos Outliers Positivos (Evidência do Dano)
+
+### Amostra dos Outliers Positivos (Evidência do Dano)
 
 A tabela a seguir apresenta os maiores desvios de preço, comprovando o Gasto Excessivo em itens intermitentes, principalmente no Pregão:
 
@@ -44,9 +43,7 @@ A tabela a seguir apresenta os maiores desvios de preço, comprovando o Gasto Ex
 | Pro00097 | Pregão | 44.6% | R$ 73.86 | R$ 0.49 | 15.17 |
 | Pro07441 | Pregão | 70.8% | R$ 6,000.00 | R$ 29.69 | 14.46 |
 
----
 
-## 3. FASE IMPROVE & CONTROL (A Solução e a Sustentabilidade)
 
 ### FASE IMPROVE: Protocolo de Sourcing Otimizado
 
@@ -60,6 +57,8 @@ A solução é a implementação de um **Protocolo Otimizado (Ações A1/A2)**, 
 
 > **Foco Estratégico (Lean):** O novo protocolo será aplicado APENAS nas **5.894 transações** que cumprem o critério de Alto Risco de Aquisição, maximizando o impacto com esforço mínimo ($\mathbf{2.24\%}$ do universo total).
 
+---
+
 ### FASE CONTROL: Monitoramento Estatístico (SPC)
 
 O sucesso e a sustentabilidade das ações são garantidos pelo monitoramento contínuo das métricas de processo e de resultado em um Dashboard de Controle.
@@ -68,3 +67,45 @@ O sucesso e a sustentabilidade das ações são garantidos pelo monitoramento co
 | :--- | :--- | :--- |
 | **Taxa de Alto Risco (Y)** | Resultado | $\mathbf{1.5\%}$ (Dispara Auditoria e Ação de Reação). |
 | **Compliance 3 Cotações (Xc1)** | Processo | $\mathbf{90\%}$ (Abaixo disso, exige Treinamento de Reforço). |
+
+---
+
+
+#### [ACESSAR O PROJECT CHARTER COMPLETO ([docs/01_Project_Charter.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/01_Project_Charter.md))]
+#### [ACESSAR O NOTEBOOK DO PROJETO ([notebooks/02_dmaic_compras_publicas.ipynb](https://github.com/DeboraKlein/GreenBelt/blob/main/notebooks/02_dmaic_compras_publicas.ipynb))]
+#### [ACESSAR O GLOSSÁRIO DO PROJETO ([docs/03)Glossario_Negocio.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/03_Glossario_Negocio.md))]
+
+
+## Como Executar o Dashboard de Controle (FASE CONTROL)
+
+Este projeto culmina em um painel de controle interativo (Streamlit) que monitora as métricas do projeto em tempo real.
+
+**Para executar o dashboard localmente:**
+
+1.  **Pré-requisitos:** Certifique-se de ter o Python e o pip instalados.
+2.  **Instale as Bibliotecas:** Abra seu terminal (CMD) e instale as bibliotecas necessárias:
+    ```bash
+    pip install streamlit pandas plotly
+    ```
+3.  **Navegue até a Pasta Raiz:** No seu terminal, vá até a pasta principal do projeto (a pasta que contém `src/` e `data/`).
+    ```bash
+    cd C:\Users\debor\OneDrive\Github\GreenBelt
+    ```
+4.  **Execute o Streamlit:** Use o comando `streamlit run` apontando para o script na pasta `src/`.
+    ```bash
+    streamlit run src/dashboard_control.py
+    ```
+5.  O Streamlit abrirá o dashboard automaticamente no seu navegador.
+
+---
+
+## Evidências do Projeto (Screenshots do Dashboard)
+
+Abaixo estão as visualizações de dados que comprovam o diagnóstico (FASE ANALYZE) e o painel de monitoramento (FASE CONTROL).
+
+
+**[Exemplo: Imagem do Gráfico SPC]**
+`![Gráfico de Controle SPC](assets/spc_chart.png)`
+
+**[Exemplo: Imagem do Gráfico de Pareto X3]**
+`![Gráfico de Pareto X3](assets/pareto_modalidade.png)`
