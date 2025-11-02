@@ -1,14 +1,15 @@
-## PROJECT CHARTER: MITIGAÇÃO DO ALTO RISCO DE PREÇO NO PROCESSO DE COMPRAS (Ênfase no Pregão)
+## PROJECT CHARTER: MITIGAÇÃO DO ALTO RISCO DE PREÇO NO PROCESSO DE COMPRAS PÚBLICAS DE MEDICAMENTOS (Ênfase no Pregão)
 
 ### 1. INFORMAÇÕES BÁSICAS
 
 | Título do Projeto | Otimização do Processo de Compras: Mitigação do Alto Risco de Preço em Itens Intermitentes. |
 | :--- | :--- |
 | Metodologia | Lean Six Sigma (Green Belt) |
-| Patrocinador (Sponsor) | Departamento de Logística e Compras |
 | Líder do Projeto | DEBORA REBULA KLEIN (Consultor/Analista de Dados) |
 | Início Previsto | 31/10/2025 |
 | Duração Estimada | 4 a 6 Meses |
+| Origem dos Dados | datasus.saude.gov.br/dataset/bps |
+| Período Analisado | 2020 a 2025 |
 
 ---
 
