@@ -104,17 +104,17 @@ Este projeto culmina em um painel de controle interativo (Streamlit) que monitor
 Abaixo estão as visualizações de dados que comprovam o diagnóstico (FASE ANALYZE) e o painel de monitoramento (FASE CONTROL).
 
 
-**[Exemplo: Imagem do Gráfico SPC]**
-`![KPIs](assets/kpis.png)`
+**[KPIs do Projeto]**
+`![KPIs](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/kpis.png)`
 
-**[Exemplo: Imagem do Gráfico de Pareto X3]**
-`![Controle](assets/grafico_controle.png)`
+**[Gráfico de Controle]**
+`![Controle](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/grafico_controle.png)`
 
-**[Exemplo: Imagem do Gráfico de Pareto X3]**
-`![Defeitos](assets/defeitos_uf.png)`
+**[Gráfico dos Defeitos]**
+`![Defeitos](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/defeitos_uf.png)`
 
-**[Exemplo: Imagem do Gráfico de Pareto X3]**
-`![Plano de Ação](assets/plano_acao.pngg)`
+**[Plano de Ação]**
+`![Plano de Ação](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/plano_acao.png)`
 
-**[Exemplo: Imagem do Gráfico de Pareto X3]**
-`![Alerta de Ação](assets/alerta_acao.png)`
+**[Alerta de Ação]**
+`![Alerta de Ação](https://github.com/DeboraKlein/GreenBelt/blob/main/assets/alerta_acao.png)`
