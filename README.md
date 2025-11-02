@@ -72,7 +72,7 @@ O sucesso e a sustentabilidade das ações são garantidos pelo monitoramento co
 
 
 #### [ACESSAR O PROJECT CHARTER COMPLETO ([docs/01_Project_Charter.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/01_Project_Charter.md))]
-#### [ACESSAR O NOTEBOOK DO PROJETO ([notebook/02_dmaic_compras_publicas.ipynb](https://github.com/DeboraKlein/GreenBelt/blob/main/notebooks/02_dmaic_compras_publicas.ipynb))]
+#### [ACESSAR O NOTEBOOK DO PROJETO ([notebook/02_dmaic_compras_publicas.ipynb](https://github.com/DeboraKlein/GreenBelt/blob/main/notebook/02_dmaic_compras_publicas.ipynb))]
 #### [ACESSAR O GLOSSÁRIO DO PROJETO ([docs/03)Glossario_Negocio.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/03_Glossario_Negocio.md))]
 
 
