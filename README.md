@@ -16,8 +16,8 @@ O problema foi formalmente redefinido com base no valor financeiro e na variabil
 
 | Métrica Chave | Definição | Baseline Comprovado | Meta SMART |
 | :--- | :--- | :--- | :--- |
-| **Métrica Y** (Defeito) | Taxa de Transações com Alto Risco de Preço (Z-Score $|>2.0|$). | **2.50%** | Redução para **1.0%**. |
-| **Dano (COPQ)** | Risco de Gasto Excessivo. | Casos críticos com Z-Score de até $\mathbf{17.34}$. | Mitigação de $\mathbf{60\%}$ do risco. |
+| **Métrica Y** (Defeito) | Taxa de Transações com Alto Risco de Preço (Z-Score $|>2,0|$). | **2,50%** | Redução para **1,0%**. |
+| **Dano (COPQ)** | Risco de Gasto Excessivo. | Casos críticos com Z-Score de até $\mathbf{17,34}$. | Mitigação de $\mathbf{60\%}$ do risco. |
 
 
 
@@ -27,8 +27,8 @@ A análise estatística comprovou que o problema é sistêmico, concentrando-se 
 
 | Causa Raiz (X) | Impacto Comprovado | Ação de Melhoria (IMPROVE) |
 | :--- | :--- | :--- |
-| **X1: Risco de Intermitência** | $\mathbf{100\%}$ dos Defeitos (Y) | Implementar o uso de **PMP Móvel (6 meses)**. |
-| **X3: Modalidade Pregão** | $83,18%$ dos Defeitos (Y) | Implementar o **Protocolo de Sourcing Otimizado (3 Cotações)**. |
+| **X1: Risco de Intermitência** | 100% dos Defeitos (Y) | Implementar o uso de **PMP Móvel (6 meses)**. |
+| **X3: Modalidade Pregão** | 83,18% dos Defeitos (Y) | Implementar o **Protocolo de Sourcing Otimizado (3 Cotações)**. |
 
 
 ### Amostra dos Outliers Positivos (Evidência do Dano)
@@ -38,10 +38,10 @@ A tabela a seguir apresenta os maiores desvios de preço, comprovando o Gasto Ex
 | ID Produto | Modalidade | Intermitência (X1) | Preço Pago (Y) | PMP Médio Ref. | Z-Score Risco |
 |:---|:---|:---|:---|:---|---:|
 | Pro00485 | Dispensa de Licitação | 46.2% | R$ 195.43 | R$ 3.50 | 17.34 |
-| Pro00175 | Pregão | 47.7% | R$ 302.50 | R$ 5.73 | 16.37 |
-| Pro07282 | Pregão | 81.5% | R$ 3,072.00 | R$ 39.52 | 16.07 |
-| Pro00097 | Pregão | 44.6% | R$ 73.86 | R$ 0.49 | 15.17 |
-| Pro07441 | Pregão | 70.8% | R$ 6,000.00 | R$ 29.69 | 14.46 |
+| Pro00175 | Pregão | 47,7% | R$ 302.50 | R$ 5.73 | 16.37 |
+| Pro07282 | Pregão | 81,5% | R$ 3,072.00 | R$ 39.52 | 16.07 |
+| Pro00097 | Pregão | 44,6% | R$ 73.86 | R$ 0.49 | 15.17 |
+| Pro07441 | Pregão | 70,8% | R$ 6,000.00 | R$ 29.69 | 14.46 |
 
 
 
@@ -55,9 +55,9 @@ A solução é a implementação de um **Protocolo Otimizado (Ações A1/A2)**, 
 | **A2. PMP Móvel (6 Meses)** | X1 (Intermitência) | Substituir o *benchmark* volátil por um PMP mais recente e estável. |
 | **A4. Poka-Yoke de Governança** | X2 (Dados) | Bloquear a aprovação de itens de Alto Risco sem o Código ANVISA. |
 
-> **Foco Estratégico (Lean):** O novo protocolo será aplicado APENAS nas **5.894 transações** que cumprem o critério de Alto Risco de Aquisição, maximizando o impacto com esforço mínimo ($\mathbf{2.24\%}$ do universo total).
+> **Foco Estratégico (Lean):** O novo protocolo será aplicado APENAS nas **5.894 transações** que cumprem o critério de Alto Risco de Aquisição, maximizando o impacto com esforço mínimo ($2,24%$ do universo total).
 
----
+
 
 ### FASE CONTROL: Monitoramento Estatístico (SPC)
 
@@ -65,15 +65,39 @@ O sucesso e a sustentabilidade das ações são garantidos pelo monitoramento co
 
 | Métrica Monitorada | Tipo de Métrica | Limite de Controle (UCL) |
 | :--- | :--- | :--- |
-| **Taxa de Alto Risco (Y)** | Resultado | $\mathbf{1.5\%}$ (Dispara Auditoria e Ação de Reação). |
-| **Compliance 3 Cotações (Xc1)** | Processo | $\mathbf{90\%}$ (Abaixo disso, exige Treinamento de Reforço). |
+| **Taxa de Alto Risco (Y)** | Resultado | 1,5% (Dispara Auditoria e Ação de Reação). |
+| **Compliance 3 Cotações (Xc1)** | Processo | 90% (Abaixo disso, exige Treinamento de Reforço). |
 
 ---
 
+## Evidências do Projeto (Screenshots do Dashboard)
+
+Abaixo estão as visualizações de dados que comprovam o diagnóstico (FASE ANALYZE) e o painel de monitoramento (FASE CONTROL).
+
+
+**[KPIs do Projeto]**
+![KPIs](assets/kpis.png)
+
+**[Gráfico de Controle]**
+![Controle](assets/grafico_controle.png)
+
+**[Gráfico dos Defeitos]**
+![Defeitos](assets/defeitos_uf.png)
+
+**[Plano de Ação]**
+![Plano de Ação](assets/plano_acao.png)
+
+**[Alerta de Ação]**
+![Alerta de Ação](assets/alerta_acao.png)
+
+
+---
 
 #### ACESSAR O PROJECT CHARTER COMPLETO ([docs/01_Project_Charter.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/01_Project_Charter.md))
 #### ACESSAR O NOTEBOOK DO PROJETO ([notebook/02_dmaic_compras_publicas.ipynb](https://github.com/DeboraKlein/GreenBelt/blob/main/notebook/02_dmaic_compras_publicas.ipynb))
 #### ACESSAR O GLOSSÁRIO DO PROJETO ([docs/03)Glossario_Negocio.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/03_Glossario_Negocio.md))
+
+---
 
 
 ## Como Executar o Dashboard de Controle (FASE CONTROL)
@@ -99,22 +123,4 @@ Este projeto culmina em um painel de controle interativo (Streamlit) que monitor
 
 ---
 
-## Evidências do Projeto (Screenshots do Dashboard)
 
-Abaixo estão as visualizações de dados que comprovam o diagnóstico (FASE ANALYZE) e o painel de monitoramento (FASE CONTROL).
-
-
-**[KPIs do Projeto]**
-![KPIs](assets/kpis.png)
-
-**[Gráfico de Controle]**
-![Controle](assets/grafico_controle.png)
-
-**[Gráfico dos Defeitos]**
-![Defeitos](assets/defeitos_uf.png)
-
-**[Plano de Ação]**
-![Plano de Ação](assets/plano_acao.png)
-
-**[Alerta de Ação]**
-![Alerta de Ação](assets/alerta_acao.png)
