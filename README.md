@@ -37,11 +37,11 @@ A tabela a seguir apresenta os maiores desvios de preço, comprovando o Gasto Ex
 
 | ID Produto | Modalidade | Intermitência (X1) | Preço Pago (Y) | PMP Médio Ref. | Z-Score Risco |
 |:---|:---|:---|:---|:---|---:|
-| Pro00485 | Dispensa de Licitação | 46.2% | R$ 195.43 | R$ 3.50 | 17.34 |
-| Pro00175 | Pregão | 47,7% | R$ 302.50 | R$ 5.73 | 16.37 |
-| Pro07282 | Pregão | 81,5% | R$ 3,072.00 | R$ 39.52 | 16.07 |
-| Pro00097 | Pregão | 44,6% | R$ 73.86 | R$ 0.49 | 15.17 |
-| Pro07441 | Pregão | 70,8% | R$ 6,000.00 | R$ 29.69 | 14.46 |
+| Pro00485 | Dispensa de Licitação | 46,2% | R$ 195,43 | R$ 3,50 | 17,34 |
+| Pro00175 | Pregão | 47,7% | R$ 302,50 | R$ 5,73 | 16,37 |
+| Pro07282 | Pregão | 81,5% | R$ 3.072,00 | R$ 39,52 | 16,07 |
+| Pro00097 | Pregão | 44,6% | R$ 73,86 | R$ 0,49 | 15,17 |
+| Pro07441 | Pregão | 70,8% | R$ 6.000,00 | R$ 29,69 | 14,46 |
 
 
 
@@ -93,9 +93,11 @@ Abaixo estão as visualizações de dados que comprovam o diagnóstico (FASE ANA
 
 ---
 
-#### ACESSAR O PROJECT CHARTER COMPLETO ([docs/01_Project_Charter.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/01_Project_Charter.md))
-#### ACESSAR O NOTEBOOK DO PROJETO ([notebook/02_dmaic_compras_publicas.ipynb](https://github.com/DeboraKlein/GreenBelt/blob/main/notebook/02_dmaic_compras_publicas.ipynb))
-#### ACESSAR O GLOSSÁRIO DO PROJETO ([docs/03)Glossario_Negocio.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/03_Glossario_Negocio.md))
+#### Veja as outras páginas do projeto
+
+#### ACESSAR O PROJECT CHARTER COMPLETO [docs/01_Project_Charter.md] (https://github.com/DeboraKlein/GreenBelt/blob/main/docs/01_Project_Charter.md)
+#### ACESSAR O NOTEBOOK DO PROJETO [notebook/02_dmaic_compras_publicas.ipynb](https://github.com/DeboraKlein/GreenBelt/blob/main/notebook/02_dmaic_compras_publicas.ipynb)
+#### ACESSAR O GLOSSÁRIO DO PROJETO [docs/03)Glossario_Negocio.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/03_Glossario_Negocio.md)
 
 ---
 
