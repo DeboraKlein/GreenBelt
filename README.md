@@ -55,7 +55,7 @@ A solução é a implementação de um **Protocolo Otimizado (Ações A1/A2)**, 
 | **A2. PMP Móvel (6 Meses)** | X1 (Intermitência) | Substituir o *benchmark* volátil por um PMP mais recente e estável. |
 | **A4. Poka-Yoke de Governança** | X2 (Dados) | Bloquear a aprovação de itens de Alto Risco sem o Código ANVISA. |
 
-> **Foco Estratégico (Lean):** O novo protocolo será aplicado APENAS nas **5.894 transações** que cumprem o critério de Alto Risco de Aquisição, maximizando o impacto com esforço mínimo ($2,24%$ do universo total).
+> **Foco Estratégico (Lean):** O novo protocolo será aplicado APENAS nas **5.894 transações** que cumprem o critério de Alto Risco de Aquisição, maximizando o impacto com esforço mínimo 2,24% do universo total.
 
 
 

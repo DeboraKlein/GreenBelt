@@ -19,8 +19,8 @@
 
 O processo de aquisição de medicamentos apresenta um alto índice de transações com **preços atípicos (outliers)**, indicando instabilidade no *benchmarking* de preços e **risco de gasto excessivo (COPQ)**, sendo este problema concentrado em itens comprados esporadicamente.
 
-* **Problema Quantificado (Y - BASELINE):** $\mathbf{2.50%}$ das $\mathbf{263.562}$ transações de compra estão em Alto Risco de Preço (Z-Score $|>2.0|$).
-* **Causa Raiz Comprovada (X):** $\mathbf{100\%}$ desses defeitos ocorrem em produtos com **Intermitência Média/Alta** e 83,18% deles na modalidade **Pregão**.
+* **Problema Quantificado (Y - BASELINE):** $\text{2,50%}$ das $\mathbf{263.562}$ transações de compra estão em Alto Risco de Preço (Z-Score $>2,0$).
+* **Causa Raiz Comprovada (X):** $\text{100,0%}$ desses defeitos ocorrem em produtos com **Intermitência Média/Alta** e 83,18% deles na modalidade **Pregão**.
 
 #### 2.2. Objetivo do Projeto (Melhoria SMART)
 
@@ -29,7 +29,7 @@ O objetivo é atuar nas Causas Raízes (X) para reduzir a variabilidade e o risc
 | Critério | Objetivo |
 | :--- | :--- |
 | **Specific (Específico)** | Implementar o **Protocolo de Sourcing Otimizado** para itens intermitentes na modalidade Pregão. |
-| **Measurable (Mensurável)** | Reduzir o Baseline de Alto Risco de $\mathbf{2.50\%}$ para um máximo de $\mathbf{1.0\%}$ do total de transações. |
+| **Measurable (Mensurável)** | Reduzir o Baseline de Alto Risco de 2,50% para um máximo de 1,0% do total de transações. |
 | **Achievable (Alcançável)** | Focar a melhoria no subconjunto de $\mathbf{5.894}$ transações que atende o critério de **Alto Risco de Aquisição**. |
 | **Relevant (Relevante)** | Reduzir o risco de gasto excessivo (COPQ) e aumentar a confiabilidade do PMP de referência. |
 | **Time-bound (Prazo)** | O objetivo primário deve ser alcançado em $\mathbf{6 \text{ meses}}$ após a implementação do novo protocolo. |
@@ -42,8 +42,8 @@ A análise dos $\mathbf{6.575}$ defeitos (Alto Risco) demonstrou a necessidade d
 
 | Causa Raiz | Métrica de Foco | Diagnóstico para o IMPROVE |
 | :--- | :--- | :--- |
-| **X1 - Risco de Intermitência** | $\mathbf{100\%}$ dos defeitos (Y) | O PMP histórico é volátil; será substituído pelo **PMP Móvel (6 meses)** (Ação A2). |
-| **X3 - Modalidade Pregão** | $\mathbf{83.18\%}$ dos defeitos (Y) | O processo de compra precisa de **validação externa (3 Cotações)** para itens críticos (Ação A1). |
+| **X1 - Risco de Intermitência** | 100,0% dos defeitos (Y) | O PMP histórico é volátil; será substituído pelo **PMP Móvel (6 meses)** (Ação A2). |
+| **X3 - Modalidade Pregão** | 83,18% dos defeitos (Y) | O processo de compra precisa de **validação externa (3 Cotações)** para itens críticos (Ação A1). |
 | **X2 - Qualidade de Dados** | Secundário (Ação Poka-Yoke) | Será implementado um *hard stop* (Poka-Yoke) para bloquear a compra de itens críticos sem o Código ANVISA preenchido (Ação A4). |
 
 ---
