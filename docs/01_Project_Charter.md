@@ -20,7 +20,7 @@
 O processo de aquisição de medicamentos apresenta um alto índice de transações com **preços atípicos (outliers)**, indicando instabilidade no *benchmarking* de preços e **risco de gasto excessivo (COPQ)**, sendo este problema concentrado em itens comprados esporadicamente.
 
 * **Problema Quantificado (Y - BASELINE):** $\mathbf{2.50%}$ das $\mathbf{263.562}$ transações de compra estão em Alto Risco de Preço (Z-Score $|>2.0|$).
-* **Causa Raiz Comprovada (X):** $\mathbf{100\%}$ desses defeitos ocorrem em produtos com **Intermitência Média/Alta** e $83.18%$ deles na modalidade **Pregão**.
+* **Causa Raiz Comprovada (X):** $\mathbf{100\%}$ desses defeitos ocorrem em produtos com **Intermitência Média/Alta** e $83.18\%$ deles na modalidade **Pregão**.
 
 #### 2.2. Objetivo do Projeto (Melhoria SMART)
 
