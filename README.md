@@ -16,7 +16,7 @@ O problema foi formalmente redefinido com base no valor financeiro e na variabil
 
 | Métrica Chave | Definição | Baseline Comprovado | Meta SMART |
 | :--- | :--- | :--- | :--- |
-| **Métrica Y** (Defeito) | Taxa de Transações com Alto Risco de Preço (Z-Score $|>2,0|$). | **2,50%** | Redução para **1,0%**. |
+| **Métrica Y** (Defeito) | Taxa de Transações com Alto Risco de Preço (Z-Score $>2,0$). | **2,50%** | Redução para **1,0%**. |
 | **Dano (COPQ)** | Risco de Gasto Excessivo. | Casos críticos com Z-Score de até $\mathbf{17,34}$. | Mitigação de 60% do risco. |
 
 
