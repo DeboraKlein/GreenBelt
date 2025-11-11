@@ -76,30 +76,30 @@ Abaixo estão as visualizações de dados que comprovam o diagnóstico (FASE ANA
 
 
 **[KPIs do Projeto]**
-![KPIs](assets/kpis.png)
+![KPIs](data/assets/kpis.png)
 
 **[Gráfico de Controle]**
-![Controle](assets/grafico_controle.png)
+![Controle](data/assets/grafico_controle.png)
 
 **[Gráfico dos Defeitos]**
-![Defeitos](assets/defeitos_uf.png)
+![Defeitos](data/assets/defeitos_uf.png)
 
 **[Plano de Ação]**
-![Plano de Ação](assets/plano_acao.png)
+![Plano de Ação](data/assets/plano_acao.png)
 
 **[Alerta de Ação]**
-![Alerta de Ação](assets/alerta_acao.png)
+![Alerta de Ação](data/assets/alerta_acao.png)
 
 
 ---
 
 #### Veja aqui as outras páginas do projeto
 
- - ACESSAR O PROJECT CHARTER COMPLETO [docs/01_Project_Charter.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/01_Project_Charter.md)
+ - ACESSAR O PROJECT CHARTER COMPLETO [docs/01_Project_Charter.md](https://github.com/DeboraKlein/GreenBelt/blob/main/books/01_Project_Charter.md)
 
- - ACESSAR O NOTEBOOK DO PROJETO [notebook/02_dmaic_compras_publicas.ipynb](https://github.com/DeboraKlein/GreenBelt/blob/main/notebook/02_dmaic_compras_publicas.ipynb)
+ - ACESSAR O NOTEBOOK DO PROJETO [notebook/02_dmaic_compras_publicas.ipynb](https://github.com/DeboraKlein/GreenBelt/blob/main/books/02_dmaic_compras_publicas.ipynb)
 
- - ACESSAR O GLOSSÁRIO DO PROJETO [docs/03)Glossario_Negocio.md](https://github.com/DeboraKlein/GreenBelt/blob/main/docs/03_Glossario_Negocio.md)
+ - ACESSAR O GLOSSÁRIO DO PROJETO [docs/03)Glossario_Negocio.md](https://github.com/DeboraKlein/GreenBelt/blob/main/books/03_Glossario_Negocio.md)
 
 ---
 
