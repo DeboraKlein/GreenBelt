@@ -119,9 +119,9 @@ Este projeto culmina em um painel de controle interativo (Streamlit) que monitor
     ```bash
     cd C:\Users\debor\OneDrive\Github\GreenBelt
     ```
-4.  **Execute o Streamlit:** Use o comando `streamlit run` apontando para o script na pasta `src/`.
+4.  **Execute o Streamlit:** Use o comando `streamlit run` apontando para o script na pasta `script/`.
     ```bash
-    streamlit run src/dashboard_control.py
+    streamlit run script/dashboard_control.py
     ```
 5.  O Streamlit abrirá o dashboard automaticamente no seu navegador.
 

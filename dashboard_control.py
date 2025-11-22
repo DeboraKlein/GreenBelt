@@ -1,5 +1,7 @@
 # Arquivo: dashboard_control.py
 
+# Arquivo: dashboard_control.py
+
 import pandas as pd
 import streamlit as st
 import numpy as np
@@ -27,10 +29,6 @@ st.set_page_config(layout="wide", page_title="Controle Six Sigma - Risco de Pre�
 @st.cache_data
 def load_data():
     """Carrega as tabelas e realiza os merges, usando o Data Model fornecido."""
-    
-    # Certifique-se que CAMINHO_RAW = 'data/raw/' está definido no topo do script
-    CAMINHO_RAW = 'data/raw/' 
-    DELIMITADOR = ';'
     
     try:
         # Carregar Tabela Fato (a principal, com as flags Y, X1, X3, e X2 'anvisa')
@@ -73,7 +71,6 @@ def load_data():
     # --- 4. TRATAMENTO DE COLUNAS (A ORDEM CRÍTICA) ---
     
     # 4.1. GARANTIR A EXISTÊNCIA DA FLAG Y (RESOLVE O KEYERROR NO CÁLCULO)
-    LIMITE_Z_SCORE = 2.0 # Usamos a constante global (deve estar no topo do arquivo)
     if 'Y_Risco_Status' not in df_dashboard.columns:
         df_dashboard['Y_Risco_Status'] = np.where(
             df_dashboard['score_z_risco'].abs() > LIMITE_Z_SCORE,
@@ -108,21 +105,7 @@ def main():
     if df.empty:
         st.error("Não foi possível carregar os dados. Verifique os arquivos CSV.")
         return
-    
-    # ---------------------------------------------------------------------------------
-# --- 2. EXECUÇÃO PRINCIPAL DO DASHBOARD ---
-# ---------------------------------------------------------------------------------
 
-def main():
-    # Carregar dados
-    df = load_data()
-    
-    if df.empty:
-        st.error("Não foi possível carregar os dados. Verifique os arquivos CSV.")
-        return
-
-    # ↓↓↓↓ COLE AQUI SEU BLOCO DE FILTROS ↓↓↓↓
-    
     # -----------------------------------------------------------
     # --- 1. CONFIGURAÇÃO DO SIDEBAR (FILTROS) ---
     # -----------------------------------------------------------
