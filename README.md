@@ -1,11 +1,24 @@
 
 # PROJETO GREEN BELT: MITIGAÇÃO DO ALTO RISCO DE PREÇO EM COMPRAS PÚBLICAS
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellowgreen)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-orange)
+![Lean Six Sigma](https://img.shields.io/badge/Lean%20Six%20Sigma-Green%20Belt-green)
+![DMAIC](https://img.shields.io/badge/Methodology-DMAIC-lightgrey)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Docs](https://img.shields.io/badge/Docs-Available-blue)
+![Dataset](https://img.shields.io/badge/Dataset-Compras%20SUS%20(ETL%20Próprio)-informational)
+
+
+
 Este repositório documenta a aplicação da metodologia Lean Six Sigma (Green Belt) para resolver um problema estratégico no processo de aquisição de medicamentos: a **instabilidade e o gasto excessivo** resultantes de transações com Alto Risco de Preço, concentradas em itens intermitentes e na modalidade Pregão.
 
 **Treinamento:** Murilo Fonseca - Instrutor Master Black Belt
 
 ---
+
 
 ## Detalhamento Técnico (Metodologia DMAIC)
 
@@ -127,4 +140,7 @@ Este projeto culmina em um painel de controle interativo (Streamlit) que monitor
 
 ---
 
+### > **Atenção:** Os dados utilizados neste projeto são provenientes do BPS/DATASUS  
+> (conforme descrito no Project Charter) e foram previamente tratados e modelados  
+> no projeto **Compras-Medicamentos-SUS**, que serviu como base para esta análise.
 
