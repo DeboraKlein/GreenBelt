@@ -5,13 +5,14 @@
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellowgreen)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
 ![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-orange)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
+![Dados Públicos](https://img.shields.io/badge/Dados-BPS/DATASUS-blue)
+![ETL Próprio](https://img.shields.io/badge/ETL-Modelagem%20Própria-success)
 
 ![Lean Six Sigma](https://img.shields.io/badge/Lean%20Six%20Sigma-Green%20Belt-green)
 ![DMAIC](https://img.shields.io/badge/Methodology-DMAIC-lightgrey)
 
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-![Dados Públicos](https://img.shields.io/badge/Dados-BPS/DATASUS-blue)
-![ETL Próprio](https://img.shields.io/badge/ETL-Modelagem%20Própria-success)
+
 
 
 
