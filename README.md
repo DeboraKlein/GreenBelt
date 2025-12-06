@@ -8,8 +8,7 @@
 ![Lean Six Sigma](https://img.shields.io/badge/Lean%20Six%20Sigma-Green%20Belt-green)
 ![DMAIC](https://img.shields.io/badge/Methodology-DMAIC-lightgrey)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-![Docs](https://img.shields.io/badge/Docs-Available-blue)
-![Dataset](https://img.shields.io/badge/Dataset-Compras%20SUS%20(ETL%20Próprio)-informational)
+
 
 
 
